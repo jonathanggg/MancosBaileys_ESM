@@ -1,153 +1,141 @@
-
-# 🌱 Mancos Baileys ESM ☄️
-
-[![Logo](https://files.catbox.moe/c5s9g0.jpg)](https://www.npmjs.com/package/mancos-baileys-esm)
-
+#🌱 Mancos Baileys ESM ☄️
+Logo
 <p align="center">
-   Baileys v7 mejorado con correcciones para la subida de multimedia en canales (newsletters), además de soporte para mensajes interactivos, álbumes y tipos de mensajes adicionales.
-   <br><br>
-   <a href="https://www.npmjs.com/package/mancos-baileys-esm">
-      <img src="https://img.shields.io/npm/v/mancos-baileys-esm?style=for-the-badge&logo=npm"/>
-   </a>
-   <a href="https://www.npmjs.com/package/mancos-baileys-esm">
-      <img src="https://img.shields.io/npm/dm/mancos-baileys-esm?style=for-the-badge&logo=npm"/>
-   </a>
-   <a href="#">
-      <img src="https://img.shields.io/github/stars/mancos/baileys-esm?style=for-the-badge&logo=github"/>
-   </a>
-   <a href="LICENSE">
-      <img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge"/>
-   </a>
-   <a href="https://nodejs.org">
-      <img src="https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&labelColor=green&logoColor=white&style=for-the-badge"/>
-   </a>
-   <a href="#">
-      <img src="https://img.shields.io/badge/ESM-only?logo=javascript&labelColor=yellow&logoColor=black&style=for-the-badge"/>
-   </a>
+Baileys v7 mejorado con correcciones para la subida de multimedia en canales (newsletters), además de soporte para mensajes interactivos, álbumes y tipos de mensajes adicionales.
+
+
+
+<a href="[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)">
+<img src="[https://img.shields.io/npm/v/mancos-baileys-esm?style=for-the-badge&logo=npm](https://img.shields.io/npm/v/mancos-baileys-esm?style=for-the-badge&logo=npm)"/>
+</a>
+<a href="[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)">
+<img src="[https://img.shields.io/npm/dm/mancos-baileys-esm?style=for-the-badge&logo=npm](https://img.shields.io/npm/dm/mancos-baileys-esm?style=for-the-badge&logo=npm)"/>
+</a>
+<a href="#">
+<img src="[https://img.shields.io/github/stars/mancos/baileys-esm?style=for-the-badge&logo=github](https://img.shields.io/github/stars/mancos/baileys-esm?style=for-the-badge&logo=github)"/>
+</a>
+<a href="LICENSE">
+<img src="[https://img.shields.io/badge/license-MIT-blue?style=for-the-badge](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)"/>
+</a>
+<a href="[https://nodejs.org](https://nodejs.org)">
+<img src="[https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&labelColor=green&logoColor=white&style=for-the-badge](https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&labelColor=green&logoColor=white&style=for-the-badge)"/>
+</a>
+<a href="#">
+<img src="[https://img.shields.io/badge/ESM-only?logo=javascript&labelColor=yellow&logoColor=black&style=for-the-badge](https://img.shields.io/badge/ESM-only?logo=javascript&labelColor=yellow&logoColor=black&style=for-the-badge)"/>
+</a>
 </p>
-
-### ✨ Puntos Destacados
-
+✨ Puntos Destacados
 Este fork está diseñado para uso en producción con un enfoque en la claridad y la seguridad:
-
-- 🚫 Sin ofuscación. Fácil de leer y auditar.
-- 🚫 Sin comportamiento de auto-seguimiento de canales (newsletters).
-
+ * 🚫 Sin ofuscación. Fácil de leer y auditar.
+ * 🚫 Sin comportamiento de auto-seguimiento de canales (newsletters).
 > [!NOTE]
 > 📄 Este proyecto se mantiene con un alcance limitado y no pretende reemplazar al Baileys original.
-
-### 📋 Tabla de Contenidos
-- [📋 Tabla de Contenidos](#-tabla-de-contenidos)
-- [✨ Puntos Destacados](#-puntos-destacados)
-- [🛠️ Ajustes Internos](#%EF%B8%8F-ajustes-internos)
-- [📨 Manejo de Mensajes y Compatibilidad](#-manejo-de-mensajes-y-compatibilidad)
-- [🧩 Opciones Adicionales de Mensaje](#-opciones-adicionales-de-mensaje)
-- [📥 Instalación](#-instalación)
-   - [🧩 Importación (ESM & CJS)](#-importación-esm--cjs)
-- [🌐 Conectar a WhatsApp (Paso Rápido)](#-conectar-a-whatsapp-paso-rápido)
-   - [🔐 Estado de Autenticación (Auth State)](#-estado-de-autenticación-auth-state)
-- [🗄️ Implementando Data Store](#%EF%B8%8F-implementando-data-store)
-- [🪪 Explicación de los IDs de WhatsApp](#-explicación-de-los-ids-de-whatsapp)
-- [✉️ Enviando Mensajes](#%EF%B8%8F-enviando-mensajes)
-   - [🔠 Texto](#-texto)
-   - [🔔 Mención](#-mención)
-   - [😁 Reacción](#-reacción)
-   - [📌 Fijar Mensaje](#-fijar-mensaje)
-   - [🔖 Mantener Chat](#-mantener-chat)
-   - [➡️ Reenviar Mensaje](#%EF%B8%8F-reenviar-mensaje)
-   - [👤 Contacto](#-contacto)
-   - [📍 Ubicación](#-ubicación)
-   - [🗓️ Evento](#%EF%B8%8F-evento)
-   - [👥 Invitación a Grupo](#-invitación-a-grupo)
-   - [🛍️ Producto](#%EF%B8%8F-producto)
-   - [📊 Encuesta](#-encuesta)
-   - [💭 Respuesta de Botón](#-respuesta-de-botón)
-   - [✨ Respuesta Enriquecida](#-respuesta-enriquecida)
-   - [🧾 Mensaje con Bloque de Código](#-mensaje-con-bloque-de-código)
-   - [🌏 Mensaje con Entidades en Línea](#-mensaje-con-entidades-en-línea)
-   - [📋 Mensaje con Tabla](#-mensaje-con-tabla)
-   - [🎞️ Mención de Estado](#%EF%B8%8F-mención-de-estado)
-- [📁 Enviando Mensajes Multimedia](#-enviando-mensajes-multimedia)
-   - [🖼️ Imagen](#%EF%B8%8F-imagen)
-   - [🎥 Video](#-video)
-   - [📃 Sticker](#-sticker)
-   - [💽 Audio](#-audio)
-   - [🗂️ Documento](#%EF%B8%8F-documento)
-   - [🖼️ Álbum (Imagen y Video)](#%EF%B8%8F-álbum-imagen--video)
-   - [📦 Paquete de Stickers](#-paquete-de-stickers)
-- [👉🏻 Enviando Mensajes Interactivos](#-enviando-mensajes-interactivos)
-   - [🔘 Botones](#-botones)
-   - [📋 Lista](#-lista)
-   - [🗄️ Interactivo](#%EF%B8%8F-interactivo)
-   - [🫙 Plantilla Hidratada (Hydrated Template)](#-plantilla-hidratada-hydrated-template)
-- [💳 Enviando Mensajes de Pago](#-enviando-mensajes-de-pago)
-   - [➕ Invitar al Pago](#-invitar-al-pago)
-   - [🧾 Factura (Invoice)](#-factura-invoice)
-   - [🛍️ Pedido (Order)](#%EF%B8%8F-pedido-order)
-   - [💳 Solicitar Pago](#-solicitar-pago)
-- [👁️ Otras Opciones de Mensaje](#%EF%B8%8F-otras-opciones-de-mensaje)
-   - [🤖 Icono de IA](#-icono-de-ia)
-   - [🕒 Efímero (Temporal)](#-efímero)
-   - [📰 Respuesta de Anuncio Externo (External Ad Reply)](#-respuesta-de-anuncio-externo-external-ad-reply)
-   - [🧑‍🧑‍🧒 Estado de Grupo](#%E2%80%8D%E2%80%8D-estado-de-grupo)
-   - [🐱 Sticker Lottie](#-sticker-lottie)
-   - [🧩 Raw (Puro)](#-raw)
-   - [🏷️ Etiqueta de Servicio Meta Seguro](#%EF%B8%8F-etiqueta-de-servicio-meta-seguro)
-   - [📑 Spoiler](#-spoiler)
-   - [👁️ Ver Una Vez](#%EF%B8%8F-ver-una-vez)
-   - [👁️ Ver Una Vez V2](#%EF%B8%8F-ver-una-vez-v2)
-   - [👁️ Ver Una Vez V2 Extensión](#%EF%B8%8F-ver-una-vez-v2-extensión)
-- [♻️ Modificar Mensajes](#%EF%B8%8F-modificar-mensajes)
-   - [🗑️ Borrar Mensajes](#%EF%B8%8F-borrar-mensajes)
-   - [✏️ Editar Mensajes](#%EF%B8%8F-editar-mensajes)
-- [🧰 Contenidos Adicionales](#-contenidos-adicionales)
-   - [🏷️ Encontrar ID de Usuario (JID|PN/LID)](#%EF%B8%8F-encontrar-id-de-usuario-jidpnlid)
-   - [🔑 Solicitar Código de Emparejamiento Personalizado](#-solicitar-código-de-emparejamiento-personalizado)
-   - [🖼️ Procesamiento de Imágenes](#%EF%B8%8F-procesamiento-de-imágenes)
-   - [📣 Gestión de Canales (Newsletters)](#-gestión-de-canales-newsletters)
-   - [👥 Gestión de Grupos](#-gestión-de-grupos)
-   - [👥 Gestión de Comunidades](#-gestión-de-comunidades)
-   - [👤 Gestión de Perfil](#-gestión-de-perfil)
-   - [🛒 Gestión de Negocios](#-gestión-de-negocios)
-   - [🔐 Gestión de Privacidad](#-gestión-de-privacidad)
-   - [📡 Eventos](#-eventos)
-- [📣 Créditos](#-créditos)
-
-### 🛠️ Ajustes Internos
-- 🖼️ Se solucionó un problema por el cual los archivos multimedia no se podían enviar a canales (newsletters) debido a un error de origen.
-- 📁 Se reintrodujo `makeInMemoryStore` con una adaptación ESM mínima y pequeños ajustes para Baileys v7.
-- 📦 Se cambió la ejecución de FFmpeg de `exec` a `spawn` para un manejo de procesos más seguro.
-- 🗃️ Se añadió `@napi-rs/image` como backend de procesamiento de imágenes compatible en `getImageProcessingLibrary()`, ofreciendo un equilibrio entre rendimiento y compatibilidad.
-
-### 📨 Manejo de Mensajes y Compatibilidad
-- 📩 Soporte ampliado de mensajes para:
-   - 🖼️ Mensaje de Álbum
-   - 👤 Mensaje de Estado de Grupo
-   - 👉🏻 Mensaje Interactivo (botones, listas, native flows, plantillas, carruseles).
-   - 🎞️ Mensaje de Mención de Estado
-   - 📦 Mensaje de Paquete de Stickers
-   - ✨ Mensaje de Respuesta Enriquecida **[NUEVO]**
-   - 🧾 Mensaje con Bloques de Código **[NUEVO]**
-   - 🌏 Mensaje con Entidades en Línea **[NUEVO]**
-   - 📋 Mensaje con Tabla **[NUEVO]**
-   - 💳 Mensaje relacionado con pagos (solicitudes de pago, invitaciones, pedidos, facturas).
-- 📰 Se simplificó el envío de mensajes con miniaturas de anuncios usando `externalAdReply`, sin necesidad de crear un `contextInfo` manualmente.
-- 💭 Soporte añadido para citar mensajes dentro de los canales (newsletters). **[NUEVO]**
-- 🎀 Soporte añadido para icono de botón personalizado. **[NUEVO]**
-
-### 🧩 Opciones Adicionales de Mensaje
-- 👁️ Banderas booleanas opcionales añadidas para el manejo de mensajes:  
-   - 🤖 `ai` - Icono de IA en el mensaje
-   - 📣 `mentionAll` - Mencionar a todos los participantes del grupo sin requerir sus JIDs en `mentions` o `mentionedJid` **[NUEVO]**
-   - 🔧 `ephemeral`, `groupStatus`, `isLottie`, `spoiler`, `viewOnce`, `viewOnceV2`, `viewOnceV2Extension`, `interactiveAsTemplate` - Envoltorios de mensajes
-   - 🔒 `secureMetaServiceLabel` - Etiqueta de servicio meta seguro en el mensaje **[NUEVO]**
-   - 📄 `raw` - Construye tu mensaje manualmente **(NO USAR PARA EXPLOTACIÓN)**
-
-### 📥 Instalación
-
-- 📄 Vía `package.json`
-
-```json
+> 
+📋 Tabla de Contenidos
+ * 📋 Tabla de Contenidos
+ * ✨ Puntos Destacados
+ * 🛠️ Ajustes Internos
+ * 📨 Manejo de Mensajes y Compatibilidad
+ * 🧩 Opciones Adicionales de Mensaje
+ * 📥 Instalación
+   * 🧩 Importación (ESM & CJS)
+ * 🌐 Conectar a WhatsApp (Paso Rápido)
+   * 🔐 Estado de Autenticación (Auth State)
+ * 🗄️ Implementando Data Store
+ * 🪪 Explicación de los IDs de WhatsApp
+ * ✉️ Enviando Mensajes
+   * 🔠 Texto
+   * 🔔 Mención
+   * 😁 Reacción
+   * 📌 Fijar Mensaje
+   * 🔖 Mantener Chat
+   * ➡️ Reenviar Mensaje
+   * 👤 Contacto
+   * 📍 Ubicación
+   * 🗓️ Evento
+   * 👥 Invitación a Grupo
+   * 🛍️ Producto
+   * 📊 Encuesta
+   * 💭 Respuesta de Botón
+   * ✨ Respuesta Enriquecida
+   * 🧾 Mensaje con Bloque de Código
+   * 🌏 Mensaje con Entidades en Línea
+   * 📋 Mensaje con Tabla
+   * 🎞️ Mención de Estado
+ * 📁 Enviando Mensajes Multimedia
+   * 🖼️ Imagen
+   * 🎥 Video
+   * 📃 Sticker
+   * 💽 Audio
+   * 🗂️ Documento
+   * 🖼️ Álbum (Imagen y Video)
+   * 📦 Paquete de Stickers
+ * 👉🏻 Enviando Mensajes Interactivos
+   * 🔘 Botones
+   * 📋 Lista
+   * 🗄️ Interactivo
+   * 🫙 Plantilla Hidratada (Hydrated Template)
+ * 💳 Enviando Mensajes de Pago
+   * ➕ Invitar al Pago
+   * 🧾 Factura (Invoice)
+   * 🛍️ Pedido (Order)
+   * 💳 Solicitar Pago
+ * 👁️ Otras Opciones de Mensaje
+   * 🤖 Icono de IA
+   * 🕒 Efímero (Temporal)
+   * 📰 Respuesta de Anuncio Externo (External Ad Reply)
+   * 🧑‍🧑‍🧒 Estado de Grupo
+   * 🐱 Sticker Lottie
+   * 🧩 Raw (Puro)
+   * 🏷️ Etiqueta de Servicio Meta Seguro
+   * 📑 Spoiler
+   * 👁️ Ver Una Vez
+   * 👁️ Ver Una Vez V2
+   * 👁️ Ver Una Vez V2 Extensión
+ * ♻️ Modificar Mensajes
+   * 🗑️ Borrar Mensajes
+   * ✏️ Editar Mensajes
+ * 🧰 Contenidos Adicionales
+   * 🏷️ Encontrar ID de Usuario (JID|PN/LID)
+   * 🔑 Solicitar Código de Emparejamiento Personalizado
+   * 🖼️ Procesamiento de Imágenes
+   * 📣 Gestión de Canales (Newsletters)
+   * 👥 Gestión de Grupos
+   * 👥 Gestión de Comunidades
+   * 👤 Gestión de Perfil
+   * 🛒 Gestión de Negocios
+   * 🔐 Gestión de Privacidad
+   * 📡 Eventos
+ * 📣 Créditos
+🛠️ Ajustes Internos
+ * 🖼️ Se solucionó un problema por el cual los archivos multimedia no se podían enviar a canales (newsletters) debido a un error de origen.
+ * 📁 Se reintrodujo makeInMemoryStore con una adaptación ESM mínima y pequeños ajustes para Baileys v7.
+ * 📦 Se cambió la ejecución de FFmpeg de exec a spawn para un manejo de procesos más seguro.
+ * 🗃️ Se añadió @napi-rs/image como backend de procesamiento de imágenes compatible en getImageProcessingLibrary(), ofreciendo un equilibrio entre rendimiento y compatibilidad.
+📨 Manejo de Mensajes y Compatibilidad
+ * 📩 Soporte ampliado de mensajes para:
+   * 🖼️ Mensaje de Álbum
+   * 👤 Mensaje de Estado de Grupo
+   * 👉🏻 Mensaje Interactivo (botones, listas, native flows, plantillas, carruseles).
+   * 🎞️ Mensaje de Mención de Estado
+   * 📦 Mensaje de Paquete de Stickers
+   * ✨ Mensaje de Respuesta Enriquecida [NUEVO]
+   * 🧾 Mensaje con Bloques de Código [NUEVO]
+   * 🌏 Mensaje con Entidades en Línea [NUEVO]
+   * 📋 Mensaje con Tabla [NUEVO]
+   * 💳 Mensaje relacionado con pagos (solicitudes de pago, invitaciones, pedidos, facturas).
+ * 📰 Se simplificó el envío de mensajes con miniaturas de anuncios usando externalAdReply, sin necesidad de crear un contextInfo manualmente.
+ * 💭 Soporte añadido para citar mensajes dentro de los canales (newsletters). [NUEVO]
+ * 🎀 Soporte añadido para icono de botón personalizado. [NUEVO]
+🧩 Opciones Adicionales de Mensaje
+ * 👁️ Banderas booleanas opcionales añadidas para el manejo de mensajes:
+   * 🤖 ai - Icono de IA en el mensaje
+   * 📣 mentionAll - Mencionar a todos los participantes del grupo sin requerir sus JIDs en mentions o mentionedJid [NUEVO]
+   * 🔧 ephemeral, groupStatus, isLottie, spoiler, viewOnce, viewOnceV2, viewOnceV2Extension, interactiveAsTemplate - Envoltorios de mensajes
+   * 🔒 secureMetaServiceLabel - Etiqueta de servicio meta seguro en el mensaje [NUEVO]
+   * 📄 raw - Construye tu mensaje manualmente (NO USAR PARA EXPLOTACIÓN)
+📥 Instalación
+ * 📄 Vía package.json
 # NPM
 "dependencies": {
    "mancos-baileys-esm": "latest"
@@ -320,7 +308,7 @@ sock.sendMessage(jid, {
 })
 
 // --- Enviar un mensaje de texto con vista previa de enlace
-const urlA = '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)'
+const urlA = 'https://www.npmjs.com/package/mancos-baileys-esm'
 
 sock.sendMessage(jid, {
    text: urlA + ' 👆🏻 ¡Echa un vistazo!',
@@ -336,7 +324,7 @@ sock.sendMessage(jid, {
 // --- Enviar un mensaje de texto con vista previa grande de enlace y favicon
 import { prepareWAMessageMedia } from 'mancos-baileys-esm'
 
-const urlB = '[https://www.npmjs.com/package/mancos-baileys-esm#readme](https://www.npmjs.com/package/mancos-baileys-esm#readme)'
+const urlB = 'https://www.npmjs.com/package/mancos-baileys-esm#readme'
 
 const { imageMessage: image } = await prepareWAMessageMedia({
    image: {
@@ -470,7 +458,7 @@ sock.sendMessage(jid, {
 
 👥 Invitación a Grupo
 const inviteCode = groupUrl
-   .split('[chat.whatsapp.com/](https://chat.whatsapp.com/)')[1]
+   .split('chat.whatsapp.com/')[1]
    ?.split('?')[0]
 
 const groupJid = '1201111111111@g.us'
@@ -504,9 +492,9 @@ sock.sendMessage(jid, {
       productId: randomUUID(),
       productImageCount: 1,
       salePriceAmount1000: 65_000_000,
-      signedUrl: '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)',
+      signedUrl: 'https://www.npmjs.com/package/mancos-baileys-esm',
       title: '📦 Starseed (Premium)',
-      url: '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)'
+      url: 'https://www.npmjs.com/package/mancos-baileys-esm'
    },
    businessOwnerJid: '0@s.whatsapp.net'
 })
@@ -702,15 +690,15 @@ sock.sendMessage(jid, {
    links: [{
       text: '1. Google',
       title: 'Motor de Búsqueda Popular',
-      url: '[https://www.google.com/](https://www.google.com/)'
+      url: 'https://www.google.com/'
    }, {
       text: '2. YouTube',
       title: 'Plataforma de Streaming Popular',
-      url: '[https://www.youtube.com/](https://www.youtube.com/)'
+      url: 'https://www.youtube.com/'
    }, {
       text: '3. Mancos Baileys ESM',
       title: 'Librería mejorada',
-      url: '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)'
+      url: 'https://www.npmjs.com/package/mancos-baileys-esm'
    }],
    footerText: '---'
 })
@@ -935,7 +923,7 @@ sock.sendMessage(jid, {
    optionTitle: '📄 Opciones', // --- Opcional
    offerText: '🏷️ ¡Nuevo Cupón!', // --- Opcional, añade una oferta al mensaje
    offerCode: 'mancos-baileys-esm', // --- Opcional
-   offerUrl: '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)', // --- Opcional
+   offerUrl: 'https://www.npmjs.com/package/mancos-baileys-esm', // --- Opcional
    offerExpiration: Date.now() + 3_600_000, // --- Opcional
    nativeFlow: [{
       text: '👋🏻 Saludo',
@@ -949,7 +937,7 @@ sock.sendMessage(jid, {
       copy: 'mancos-baileys-esm'
    }, {
       text: '🌐 Fuente',
-      url: '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)',
+      url: 'https://www.npmjs.com/package/mancos-baileys-esm',
       useWebview: true // --- Opcional
    }, {
       text: '📋 Seleccionar',
@@ -990,7 +978,7 @@ sock.sendMessage(jid, {
       footer: '🏷️ Pinterest',
       nativeFlow: [{
          text: '🌐 Fuente',
-         url: '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)',
+         url: 'https://www.npmjs.com/package/mancos-baileys-esm',
          useWebview: true
       }]
    }, {
@@ -1001,11 +989,11 @@ sock.sendMessage(jid, {
       footer: '🏷️ Pinterest',
       offerText: '🏷️ ¡Nuevo Cupón!',
       offerCode: 'mancos-baileys-esm',
-      offerUrl: '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)',
+      offerUrl: 'https://www.npmjs.com/package/mancos-baileys-esm',
       offerExpiration: Date.now() + 3_600_000,
       nativeFlow: [{
          text: '🌐 Fuente',
-         url: '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)'
+         url: 'https://www.npmjs.com/package/mancos-baileys-esm'
       }]
    }, {
       image: {
@@ -1017,7 +1005,7 @@ sock.sendMessage(jid, {
       optionTitle: '👉🏻 Opciones',
       offerText: '🏷️ ¡Nuevo Cupón!',
       offerCode: 'mancos-baileys-esm',
-      offerUrl: '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)',
+      offerUrl: 'https://www.npmjs.com/package/mancos-baileys-esm',
       offerExpiration: Date.now() + 3_600_000,
       nativeFlow: [{
          text: '🛒 Producto',
@@ -1025,7 +1013,7 @@ sock.sendMessage(jid, {
          icon: 'default'
       }, {
          text: '🌐 Fuente',
-         url: '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)'
+         url: 'https://www.npmjs.com/package/mancos-baileys-esm'
       }]
    }]
 }, {
@@ -1064,7 +1052,7 @@ sock.sendMessage(jid, {
       id: '#Order'
    }, {
       text: '🌐 Fuente',
-      url: '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)'
+      url: 'https://www.npmjs.com/package/mancos-baileys-esm'
    }, {
       text: '📞 Llamar',
       call: '628123456789'
@@ -1142,7 +1130,7 @@ sock.sendMessage(jid, {
       body: '❓ No lo sé',
       thumbnail: fs.readFileSync('./path/to/image.jpg'), // --- Debe estar en formato buffer
       largeThumbnail: false, // --- O true para una miniatura más grande
-      url: '[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)' // --- Opcional, usado para el almacenamiento en caché interno de WhatsApp y URL directa
+      url: 'https://www.npmjs.com/package/mancos-baileys-esm' // --- Opcional, usado para el almacenamiento en caché interno de WhatsApp y URL directa
    }
 }, {
    quoted: message
@@ -1709,7 +1697,7 @@ console.dir(order, { depth: null })
 await sock.updateBusinessProfile({
    address: 'Jakarta, Indonesia',
    description: '🛒 Tienda Oficial',
-   websites: ['[https://www.npmjs.com/package/mancos-baileys-esm](https://www.npmjs.com/package/mancos-baileys-esm)'],
+   websites: ['https://www.npmjs.com/package/mancos-baileys-esm'],
    email: 'more-more@gmail.com',
    hours: {
       timezone: 'Asia/Jakarta',
@@ -1818,4 +1806,3 @@ Este fork también incluye mejoras adicionales de la comunidad, adaptado y mante
 > [!CAUTION]
 > ⚠️ El código base e historia de modificaciones pertenece a sus respectivos autores. Este es un fork derivado.
 > 
-
